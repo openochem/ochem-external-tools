@@ -11,4 +11,4 @@ program-darwin  - for 64bits Intell MacOsX
 program-linux   - for 64bits Linux
 program-aarch64 - for 64bits ARM architecture running on m* mac (ubuntu running as virtual machine on m* mac) 
 
-INSTRUCTIONS_OCHEM in each folder contain instructions which were used to configure and compile each respective module
+README in each folder contain instructions which were used to configure and compile each respective module
