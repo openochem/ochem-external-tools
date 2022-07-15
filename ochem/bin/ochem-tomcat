@@ -1,0 +1,78 @@
+#!/bin/sh
+
+tomcat_id=ochem-tomcat
+ochembase="/etc/ochem"
+CATALINA_HOME=$ochembase/$tomcat_id
+CATALINA_BASE=$CATALINA_HOME
+TOMCAT_USER=$USER
+MEMORY=`expr $OCHEMEMORY + 1024`
+MEMORY=$MEMORY"M"
+echo "starting with java memory of  $MEMORY"
+TMP_DIR=/tmp
+if [ -z $KILL_ITERATIONS ]; then
+	KILL_ITERATIONS=1
+fi
+CATALINA_OPTS="-Xmx$MEMORY -Djava.awt.headless=true"
+
+if [ ! -d $CATALINA_HOME ]; then
+	echo "Warning: $CATALINA_HOME does not exist"
+fi 
+
+CLASSPATH=\
+$CATALINA_HOME/bin/commons-daemon.jar:\
+$CATALINA_HOME/bin/bootstrap.jar
+
+if [ -e $CATALINA_HOME/bin/tomcat-juli.jar ]; then
+	CLASSPATH=$CLASSPATH:$CATALINA_HOME/bin/tomcat-juli.jar
+fi
+
+case "$1" in
+  start)
+    mv $CATALINA_HOME/logs/catalina.out $CATALINA_HOME/logs/catalina`date +%y%m%d_%H%M%S`.out
+ 
+    java \
+    -Dcatalina.home=$CATALINA_HOME \
+    -Dcatalina.base=$CATALINA_BASE \
+    -Djava.io.tmpdir=$TMP_DIR \
+    $CATALINA_OPTS \
+    -cp $CLASSPATH \
+    org.apache.catalina.startup.Bootstrap start >> $CATALINA_HOME/logs/catalina.out 2>&1 & 
+    exit $?
+    ;;
+
+  stop)
+    java \
+    -Dcatalina.home=$CATALINA_HOME \
+    -Dcatalina.base=$CATALINA_BASE \
+    -Djava.io.tmpdir=$TMP_DIR \
+    -cp $CLASSPATH \
+    org.apache.catalina.startup.Bootstrap stop
+    
+    
+    pid=`ps aux | grep $tomcat_id | grep -v grep | grep catalina | awk '{ print $2 }'`
+    i=0
+    while [ -n "$pid" -a $i -lt $KILL_ITERATIONS ]
+    do
+    	sleep 3
+    	i=`expr $i + 1` 
+		echo "Waiting for $tomcat_id (PID $pid) to exit, attempt $i"
+		pid=`ps aux | grep $tomcat_id | grep -v grep | grep catalina | awk '{ print $2 }'`
+	done
+     
+    if [ -n "$pid" ]; then
+		echo "INFO: OCHEM Tomcat did not quit, forcing kill"
+		kill -9 $pid
+    fi
+    exit $?
+    ;;
+    
+    restart)
+    $0 stop
+    $0 start
+    exit $?
+    ;;
+
+  *)
+    echo "Usage: $tomcat_id start/stop, should be run only under bigchem user"
+    exit 1;;
+esac

@@ -1,0 +1,3 @@
+Descriptors are from https://github.com/reymond-group/map4
+
+There wwere adapted to work in OCHEM by BIGCHEM GmbH under the same license (MIT)

@@ -1,0 +1,3 @@
+Downloaded from https://github.com/jaak-s/macau
+
+ The script located in this directory for integration in OCHEM was done by BIGCHEM GmbH under same license (MIT)

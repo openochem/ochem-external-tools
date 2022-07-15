@@ -1,0 +1,9 @@
+To update:
+
+Download Linux and Apple versions from http://users.abo.fi/mivainio/balloon/download.php
+and rename executable files for
+
+Linux version to balloon-linux
+Apple version to balloon-darwin
+
+as well as include in the directory MMFF94.mff file (it is the same for both Linux and Darwin versions)

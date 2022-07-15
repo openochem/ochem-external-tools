@@ -1,0 +1,87 @@
+# File containing the list of mopac files to be analysed
+# Provide full paths
+lstMopFileName=mopac.txt
+
+# File containing the list of SDF files to be analysed
+# Should be in the same order as the mopac files
+lstSDFFileName=mols.txt
+
+# Output file for descriptors
+outputFileName=mols_desc.txt
+
+# Descriptor List
+# Indicate Yes/No or yes/no or Y/N or y/n and add additional parameters where required
+# a blank after the "=" sign implies No
+
+# Calculate EVA descriptors
+# Assumes that the mopac files have the vibrational frequencies
+EVA=N
+evaSigma=2
+evaL=1
+evaMinVal=1
+evaMaxVal=4000
+
+
+# Calculate EEVA descriptors
+EEVA=N
+eevaSigma=0.050
+eevaL=0.025
+eevaMinVal=-45
+eevaMaxVal=10
+
+
+# 3D-MORSE
+Morse=N
+
+# 3D-WHIM
+whim=N
+
+# 3D-autocorrelation
+autocorrelation=N
+
+# RDF
+rdf=N
+#RDFBETA=
+
+# BCUT
+bcut=N
+
+# Coulomb matrix
+COULOMBMATRIX=N
+# CPSA
+cpsa=Y
+
+# Charge
+chargedesc=Y
+
+# MOPAC
+# Basic MOPAC calculated quantities
+mopac=Y
+
+# Geometry/shape descriptors
+geometry=Y
+
+# provide a prefix if required
+prefix=
+
+# Graph eigenvalues
+graphenergy=Y
+
+# Distance profile
+dip=N
+
+
+# specify charge calculation scheme (MOPAC/EEM/UDF). Default is MOPAC charges.
+# Specifying a user-defined scheme requires the user to provide a file containing
+# charges for each molecule.
+ChargeType=MOPAC
+#lstChargeFileName=
+
+
+# Weighting schemes for RDF,MORSE,WHIM,BCUT and auto/cross correlation
+charge=Yes
+selfpol=Yes
+nucleardeloc=Yes
+electrophilicdeloc=Yes
+radicaldeloc=Yes
+chgden=No

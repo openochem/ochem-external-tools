@@ -1,0 +1,33 @@
+On Jul 8, 2022, at 6:34 AM, Igor Baskin <igbaskin@.....> wrote:
+
+Hi, Igor,
+
+It is OK to include the whole version of FSMLR with the source code.
+
+Regards,
+Igor
+
+On Mon, 4 Jul 2022 at 20:12, Igor Tetko <itetko@....> wrote:
+Dear Igor,
+
+OCHEM will become an open source later this week (will be available on the GitHub together with instructions how to install and use it). In  this respect I am asking all users, who have contributed their tools to OCHEM, how to better provide these tools. 
+
+I would like to include source code of your FSMLR program. Let me know whether you would like to add any specific license or whether it is OK to include it as "it is".
+
+Thank you!
+
+Best regards,
+Igor
+
+
+Dr. Igor Tetko
+Managing Director (CEO)
+
+BIGCHEM GmbH 
+Valerystr. 49 D-85716 
+Unterschleißheim, Germany
+
+Registered Office: Lkr. München
+Executive Director: Dr. Igor Tetko
+ Register Number: Amtsgericht München  HRB 221593
+USt-IdNr: DE304197273

@@ -1,0 +1,6 @@
+The files in this directory are uploaded from MOPAC2016 http://openmopac.net site
+
+Krakenx descriptors downloaded and compiled from https://gitlab.com/vishsoft/krakenx
+
+Other files include script process-cosmo.py to analyse SIGMA profiles (conributed by Peter Jarowski) as well as
+file with parameterisation for MOPAC2016 distributed under the MIT license https://github.com/lvpp/sigma/tree/master/MOPAC

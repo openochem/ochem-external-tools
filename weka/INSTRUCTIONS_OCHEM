@@ -1,0 +1,17 @@
+The weka jar should be downloaded from http://www.cs.waikato.ac.nz/ml/weka/downloading.html
+
+This file should be inside of the folder and renamed as weka.jar.
+
+OCHEM supports only version 3.6.15 of Weka. 
+
+The later versions will not work due to the change of the binary format of Weka.
+
+The code (files are copied to /etc/source/weka during installation)
+
+# WEKA
+cd
+mkdir -p /etc/source/weka
+wget https://sourceforge.net/projects/weka/files/weka-3-6/3.6.15/weka-3-6-15.zip/download
+unzip download
+weka-3-6-15/weka.jar /etc/source/weka
+rm download

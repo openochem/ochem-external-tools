@@ -1,0 +1,6 @@
+The DLCA approach was described in https://pubs.acs.org/doi/10.1021/acs.jcim.9b00526 
+and was adapted for the use inside of OCHEM by BIGCHEM GmbH
+
+It is in the public domain.
+
+See also https://predictor.ncats.io/ for examples of models developed using DLCA

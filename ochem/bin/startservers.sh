@@ -1,0 +1,12 @@
+#!/bin/sh
+
+mkdir /tmp/results
+cd /tmp/
+mkdir /tmp/.screen && chmod 700 /tmp/.screen
+rm -rf /etc/cs_servers/*
+mkdir /etc/cs_servers/server1
+cd /etc/cs_servers/server1
+unzip /etc/ochem/release.zip
+cd /etc/cs_servers/
+ln -s server1/tools/utils/* .
+perl monitor.pl > monitor.log  &

@@ -1,0 +1,5 @@
+Transformer CNN is in public domain, see:
+
+https://github.com/bigchem/transformer-cnn
+
+Code was adapted to be used in OCHEM
