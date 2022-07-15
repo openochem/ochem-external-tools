@@ -1,6 +1,6 @@
 # Open OCHEM -- AI models for drug discovery and enviromental chemistry
 
-This directory contains sources and/or compiled versions of packages used in open OCHEM [openochem](./openochem) directory
+This directory contains sources and/or compiled versions of packages used in open OCHEM [openochem](https://github.com/openochem/openochem) directory
 
 They are distributed under the license agreements, which are provided in the respective directories of each package 
 (some of the packages are licensed only for non-commercial use. The respective commercial license should be acquired through, e.g., BIGCHEM GmbH).
