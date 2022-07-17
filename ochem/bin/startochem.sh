@@ -16,7 +16,7 @@ cd /etc/ochem/ochem-tomcat/webapps/ROOT
 jar -xvf /ochem/tmp/cs_release/ochem.war
 cd js
 rm -rf lib; mkdir lib
-cp -r /etc/source/javascripts/ lib
+cp -r /etc/source/javascripts lib
 
 #METASERVER
 mkdir -p /etc/ochem/metaserver-tomcat/webapps/metaserver
