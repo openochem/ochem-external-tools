@@ -4,7 +4,6 @@ ochembase="/etc/ochem"
 CATALINA_HOME=$ochembase/$tomcat_id
 CATALINA_BASE=$CATALINA_HOME
 TOMCAT_USER=$USER
-eval $(/etc/ochem/env.sh)
 MEMORY=`expr $METAMEMORY + 1024`
 MEMORY=$MEMORY"M"
 echo $MEMORY
@@ -75,6 +74,6 @@ case "$1" in
     ;;
 
   *)
-    echo "Usage: $tomcat_id start/stop, should be run only under bigchem user"
+    echo "Usage: $tomcat_id start/stop"
     exit 1;;
 esac

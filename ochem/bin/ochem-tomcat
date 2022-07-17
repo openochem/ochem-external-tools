@@ -73,6 +73,6 @@ case "$1" in
     ;;
 
   *)
-    echo "Usage: $tomcat_id start/stop, should be run only under bigchem user"
+    echo "Usage: $tomcat_id start/stop"
     exit 1;;
 esac
