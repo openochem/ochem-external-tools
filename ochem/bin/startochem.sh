@@ -15,16 +15,16 @@ mkdir -p /etc/ochem/ochem-tomcat/webapps/ROOT
 cd /etc/ochem/ochem-tomcat/webapps/ROOT
 jar -xvf /ochem/tmp/cs_release/ochem.war
 cd js
-rm -rf lib
-ln -s /etc/source/javascripts lib
+rm -rf lib; mkdir lib
+cp -r /etc/source/javascripts/ lib
 
 #METASERVER
 mkdir -p /etc/ochem/metaserver-tomcat/webapps/metaserver
 cd /etc/ochem/metaserver-tomcat/webapps/metaserver
 jar -xvf /ochem/tmp/cs_release/metaserver.war
 cd js
-ln -sf /etc/source/javascripts/jquery.flot.js .
-ln -sf /etc/source/javascripts/jquery-1.4.1.min.js .
+cp /etc/source/javascripts/jquery.flot.js .
+cp /etc/source/javascripts/jquery-1.4.1.min.js .
 
 sh /etc/ochem/ochem/bin/metaserver-tomcat start
 sh /etc/ochem/ochem/bin/ochem-tomcat start
