@@ -1,7 +1,9 @@
 EPA T.E.S.T. descriptors adapted for use inside of OCHEM
-
-Provided by Martin Todd 
-
+ 
+Provided by Todd Martin, Ph.D., U.S. Environmental Protection Agency.
+ 
 They are based on CDK (LGPL 2.0) and use the same license
-
-The descriptors were modified to be used inside of OCHEM by BIGCHEM GmBH under the same agreement.
+ 
+The descriptors were modified to be used inside of OCHEM by BIGCHEM GmbH under the same agreement.
+ 
+The equations used in the descriptor calculations are available in the Molecular Descriptors Guide provided in the help menu of the T.E.S.T. software (https://www.epa.gov/chemical-research/toxicity-estimation-software-tool-test).
