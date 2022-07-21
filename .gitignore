@@ -19,3 +19,5 @@ RemoteSystemsTempFiles
 *.out
 *.tar
 *.tar.gz
+transnn/__pycache__/__pycache__
+transnn/__pycache__/layers.cpython-37.pyc
