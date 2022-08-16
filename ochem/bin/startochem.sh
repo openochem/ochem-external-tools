@@ -17,6 +17,7 @@ jar -xvf /ochem/tmp/cs_release/ochem.war
 cd js
 rm -rf lib; mkdir lib
 cp -r /etc/source/javascripts/* lib
+rm -rf lib/jquery-1.4.1.min.js
 
 #METASERVER
 mkdir -p /etc/ochem/metaserver-tomcat/webapps/metaserver
