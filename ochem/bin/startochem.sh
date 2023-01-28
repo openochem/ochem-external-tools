@@ -7,9 +7,6 @@ unzip -o /ochem/ochem.release -d /ochem/tmp/cs_release/
 #mv /ochem/tmp/cs_release/ochem.war /etc/ochem/ochem-tomcat/webapps/ROOT.war
 #mv /ochem/tmp/cs_release/metaserver.war /etc/ochem/metaserver-tomcat/webapps/metaserver.war
 
-echo export OCHEMEMORY=4096
-echo export METAMEMORY=2048
-
 #OCHEM
 mkdir -p /etc/ochem/ochem-tomcat/webapps/ROOT
 cd /etc/ochem/ochem-tomcat/webapps/ROOT
