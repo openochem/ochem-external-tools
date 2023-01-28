@@ -1,0 +1,7 @@
+*.libsvm
+*.pyc
+*.log
+*.hdf
+.idea/
+old/
+__pycache__/
