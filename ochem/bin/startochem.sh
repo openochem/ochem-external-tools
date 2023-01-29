@@ -21,6 +21,8 @@ rm -rf lib; mkdir lib
 cp -r /etc/source/javascripts/* lib
 rm -rf lib/jquery-1.4.1.min.js
 cp /etc/source/cdk/* /etc/ochem/ochem-tomcat/webapps/ROOT/WEB-INF/lib/ # can be used to update CDK
+cp /etc/source/chem/* /etc/ochem/ochem-tomcat/webapps/ROOT/WEB-INF/lib/ # any additional code to be copied can be added here
+
 
 #METASERVER
 mkdir -p /etc/ochem/metaserver-tomcat/webapps/metaserver
