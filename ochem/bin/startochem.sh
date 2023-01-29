@@ -1,5 +1,10 @@
 #!/bin/sh
 
+for var in "$@"
+do
+    export "$var"
+done
+
 cd /etc/ochem ; unzip -o /home/ochem.zip
 cp /ochem/cfg/* .
 
