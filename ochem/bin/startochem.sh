@@ -4,6 +4,7 @@ for var in "$@"
 do
     if [[ $var =~ ^ochemenv(.+) ]]; then
         port=`echo "$var" | sed 's/ochemenv//'`
+        port=${port/\/}
     else
         export "$var"
     fi
