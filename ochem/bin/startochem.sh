@@ -47,7 +47,7 @@ if [ -z "$port" ]; then
 	cd js
 	cp /etc/source/javascripts/jquery.flot.js .
 	cp /etc/source/javascripts/jquery-1.4.1.min.js .
-	sh /etc/ochem/ochem/bin/metaserver-tomcat start
+	bash /etc/ochem/ochem/bin/metaserver-tomcat start
 fi
 
-sh /etc/ochem/ochem/bin/ochem-tomcat start
+bash /etc/ochem/ochem/bin/ochem-tomcat start
