@@ -10,9 +10,11 @@ do
     fi
 done
 
-cd /etc/ochem ; unzip -o /home/ochem.zip
+echo "unzip /home/ochem.zip"
+cd /etc/ochem ; unzip -o /home/ochem.zip > /dev/null
 cp /ochem/cfg/* .
 
+echo "unzip /ochem/ochem.release"
 unzip -o /ochem/ochem.release -d /ochem/tmp/cs_release/
 
 if [ -z "$port" ]; then 
