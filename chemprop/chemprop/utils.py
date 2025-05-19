@@ -77,7 +77,7 @@ def load_checkpoint(path: str,
     debug = logger.debug if logger is not None else print
 
     # Load model and args
-    state = torch.load(path, map_location=lambda storage, loc: storage)
+    state = torch.load(path, map_location=lambda storage, loc: storage,weights_only=False)
     args, loaded_state_dict = state['args'], state['state_dict']
 
     if current_args is not None:
@@ -121,7 +121,7 @@ def load_scalers(path: str) -> Tuple[StandardScaler, StandardScaler]:
     :param path: Path where model checkpoint is saved.
     :return: A tuple with the data scaler and the features scaler.
     """
-    state = torch.load(path, map_location=lambda storage, loc: storage)
+    state = torch.load(path, map_location=lambda storage, loc: storage,weights_only=False)
 
     scaler = StandardScaler(state['data_scaler']['means'],
                             state['data_scaler']['stds']) if state['data_scaler'] is not None else None
@@ -139,7 +139,7 @@ def load_args(path: str) -> Namespace:
     :param path: Path where model checkpoint is saved.
     :return: The arguments Namespace that the model was trained with.
     """
-    return torch.load(path, map_location=lambda storage, loc: storage)['args']
+    return torch.load(path, map_location=lambda storage, loc: storage,weights_only=False)['args']
 
 
 def load_task_names(path: str) -> List[str]:
